@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primary: #cf919a;
+    --color-secondary: #c16475;
+    --color-third: #e6d5d6;
+    --color-four: #650f22;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: Georgia, 'Times New Roman', Times, serif
+}
+
+body {
+    background: linear-gradient(90deg, #e6d5d6 0%, #ca919d 100%);
+    padding: 0 1rem;
+    font-size: 1.6rem;
+  
+}
+
+header,
+.hero-section,
+.courses-section,
+footer {
+    border-color: var(--color-primary);
+    border-style: solid;
+    border-width: 0 1px 1px 1px;
+    padding: 1.25rem;
+}
+
+header img {
+    display: block;
+    margin: 1rem auto;
+
+}
+
+header nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 1rem auto 0;
+
+}
+
+nav a {
+    color: black;
+    font-weight: bold;
+    font-size: 1.55rem;
+    padding: .5rem;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: var(--color-four);
+    color: var(--color-primary);
+}
+
+header nav a:nth-child(2n - 1) {
+    text-align: right;
+
+}
+
+.button {
+    background-color: var(--color-four);
+    border: 2px solid var(--color-primary);
+    box-shadow: 4px 4px 0 var(--color-secondary);
+    color: var(--color-third);
+    display: block;
+    font-size: 1.55rem;
+    padding: .75rem 1rem;
+    max-width: 14rem;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.hero-section {
+    padding-left: 0;
+    padding-bottom: 16rem;
+}
+
+.hero-section img {
+    display: flex;
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 3rem;
+    line-height: 105%;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+.hero-section p {
+    font-size: 1.80rem;
+    padding-right: 1.25rem;
+}
+
+.hero-section .button {
+    position: relative;
+}
+
+
+.decoration {
+    display: block;
+    position: relative;
+}
+
+.decoration::after {
+    content: '';
+    background: url("/img/three-dashes.svg") !important;
+    position: absolute;
+    top: -0.75rem;
+    height: 36px;
+    width: 40px;
+}
+
+.courses-section {
+    padding-bottom: 8rem;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1.25rem;
+    margin-top: -8rem;
+    margin-bottom: 4rem;
+}
+
+.card {
+    background-color: var(--color-third);
+    border: 2px solid var(--color-secondary);
+    box-shadow: 4px 4px 0 var(--color-secondary);
+    max-width: 17rem;
+    padding: 2rem 0 0 2rem;
+
+}
+
+.card:nth-child(2n) {
+    align-self: end;
+    background-color: var(--color-primary);
+}
+
+.card strong {
+    display: block;
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+.card a {
+    display: block;
+    margin: 3rem 0 0 auto;
+    width: fit-content;
+}
+
+/* Rodapé */
+footer {
+    border-bottom: 0;
+    padding: 1rem 1.25rem 4rem;
+
+}
+
+/* Utilitários */
+
+.mt-2 {
+    margin-top: 2rem;
+}
+
+.mb-1 {
+    margin-bottom: 1rem;
+}
+
+.mb-2 {
+    margin-bottom: 2rem;
+    
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text-primary {
+  color: var(--color-secondary);  
+}
+
+.text-center {
+    text-align: center;
+}
+
+@media screen and (min-width: 40rem) {
+    header nav {
+        display: block;
+        text-align: center;
+    }
+
+    .cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .card:nth-child(2n){
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (min-width: 48rem) {
+    header div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    header img, 
+    header nav, 
+    header .button {
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 72rem) {
+    h1, h2 {
+        font-size: 4rem;
+    }
+    .container {
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+        max-width: 120rem;
+    }
+}
+
+.about-column {
+    flex: 2;
+}
+
+footer nav {
+    flex: 1;
+}
+
